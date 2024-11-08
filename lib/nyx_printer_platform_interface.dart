@@ -44,10 +44,4 @@ abstract class NyxPrinterPlatform extends PlatformInterface {
   Future<int?> printBitmap(Uint8List bytes) {
     return instance.printBitmap(bytes);
   }
-
-  /// This method feeds paper by size.
-  Future<int?> paperOut(int size);
-
-  /// This method feeds paper based on text size.
-  Future<int?> paperOutText(int size);
 }

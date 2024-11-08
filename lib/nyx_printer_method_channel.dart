@@ -50,22 +50,4 @@ class MethodChannelNyxPrinter extends NyxPrinterPlatform {
         await methodChannel.invokeMethod<int?>('printBitmap', {"bytes": bytes});
     return version;
   }
-
-  /// This method feeds paper by size.
-  @override
-  Future<int?> paperOut(int size) async {
-    final result = await methodChannel.invokeMethod<int?>('paperOut', {
-      "size": size,
-    });
-    return result;
-  }
-
-  /// This method feeds paper based on text size.
-  @override
-  Future<int?> paperOutText(int size) async {
-    final result = await methodChannel.invokeMethod<int?>('paperOutText', {
-      "size": size,
-    });
-    return result;
-  }
 }

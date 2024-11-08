@@ -43,16 +43,4 @@ class NyxPrinter {
   Future<int?> printImage(Uint8List bytes) {
     return NyxPrinterPlatform.instance.printBitmap(bytes);
   }
-
-  /// [paperOut] will feed paper by the specified size.
-  /// success result is 0.
-  Future<int?> paperOut(int size) {
-    return NyxPrinterPlatform.instance.paperOut(size);
-  }
-
-  /// [paperOutText] will feed paper based on the text size.
-  /// success result is 0.
-  Future<int?> paperOutText(int size) {
-    return NyxPrinterPlatform.instance.paperOutText(size);
-  }
 }
